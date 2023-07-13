@@ -1,12 +1,21 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import {Image, StyleSheet, Text, View} from 'react-native';
+import Animated, { FadeIn, FadeOut } from 'react-native-reanimated'
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
+    <Animated.View
+        key={'animate_expo'}
+        entering={FadeIn.duration(4000)}
+        exiting={FadeOut.duration(4000)}
+        style={styles.container}>
+      <Image
+          source={require('./assets/expo.png')}
+          style={{ width: 100, height: 100 }}
+          />
+      <Text>First react-native app created with npx expo!</Text>
       <StatusBar style="auto" />
-    </View>
+    </Animated.View>
   );
 }
 

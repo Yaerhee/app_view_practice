@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "app_view_practice",
-    "slug": "app_view_practice",
+    "slug": "first_react_native_repo",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
